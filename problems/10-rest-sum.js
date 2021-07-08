@@ -10,9 +10,7 @@ restSum(0); // => 0
 ***********************************************************************/
 
 // you'll need to change the parameters!
-function restSum() {
-  // your code here
-}
+const restSum = (...args) => args.reduce((sum, num) => sum += num)
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = restSum;
