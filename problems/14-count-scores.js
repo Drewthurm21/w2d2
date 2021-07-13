@@ -27,8 +27,10 @@ let peeps = [
 console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
-const countScores = (people, newObj = {}) => people.forEach(obj => newObj[obj.name] ? newObj[obj.name] += obj.score : newObj[obj.name] = obj.score)
-
+const countScores = (people, newObj = {}) => {
+  people.forEach(obj => newObj[obj.name] ? newObj[obj.name] += obj.score : newObj[obj.name] = obj.score)
+  return newObj
+}
 
 let peeps = [
   { name: "Anthony", score: 2 },
